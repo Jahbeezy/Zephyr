@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js">
+    </script>
+    <title>Zephyr</title>
+</head>
+<body>
+
+
+    <header>
+        <h1>🌥Weather Channel</h1>
+    </header>
+
+
+    <main class="content">
+
+        <section class="searcher">
+            <div class="searchBox">
+                <h2>Search a City:</h2>
+                <input type="text" id="input" class="searchInput">
+                <button id="btn" class="btn">Search</button>
+            </div>
+            <ul class="recentSearches" id="searchHistory">
+
+            </ul>
+        </section>
+
+        <section id="results" class="results hide">
+            <div class="currentResults">
+                <h2 class="date" id="date">Current Date</h2>
+                <ul class="list">
+                    <li id="temp" >Temp: </li>
+                    <li id="wind">Wind: </li>
+                    <li id="humid">Humidity: </li>
+                    <li id="uv">UV Index: </li>
+                </ul>
+            </div>
+            <h3>Five Day Forecast:</h3>
+            <div class="fiveDay" id="fiveDay">
+                
+                <!-- <div class="fiveBox" id="fiveBox">
+                    <h4 class="fiveDate" id="fiveDate">Date</h4>
+                    <ul class="list2">
+                        <li id="fiveTemp">Temp: </li>
+                        <li id="fiveWind">Wind: </li>
+                        <li id="fiveHumid">Humdity: </li>
+                    </ul> -->
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+
+</body>
+    <script src="./script.js"></script>
+</html>
