@@ -29,7 +29,7 @@ function weather(e) {
 
 
     e.preventDefault();
-    var URL = "http://api.openweathermap.org/data/2.5/weather?q=" + input.value + "&units=imperial&appid=996c94364b7477ad5464025a50334747"
+    var URL = "https://api.openweathermap.org/data/2.5/weather?q=" + input.value + "&units=imperial&appid=996c94364b7477ad5464025a50334747"
 
     resultsEL.classList.remove("hide")
 
@@ -97,7 +97,7 @@ function weather(e) {
                 var imgEl = document.createElement("img")
                 
                 
-                imgEl.setAttribute("src", "http://openweathermap.org/img/wn/" + dato.list[i].weather[0].icon + ".png")
+                imgEl.setAttribute("src", "https://openweathermap.org/img/wn/" + dato.list[i].weather[0].icon + ".png")
                 imgEl.setAttribute("width", "35px")
                 imgEl.setAttribute("id", "imgEL" + i)
                 dateH4.append(imgEl)
@@ -105,7 +105,7 @@ function weather(e) {
 
                 
                 
-                imgEl2.setAttribute("src", "http://openweathermap.org/img/wn/" + dato.list[0].weather[0].icon + ".png")
+                imgEl2.setAttribute("src", "https://openweathermap.org/img/wn/" + dato.list[0].weather[0].icon + ".png")
                 imgEl2.setAttribute("id", "imgEL2" + i)
                 dayEl.append(imgEl2)
 
