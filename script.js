@@ -107,7 +107,7 @@ function weather(e) {
                 
                 imgEl2.setAttribute("src", "https://openweathermap.org/img/wn/" + dato.list[0].weather[0].icon + ".png")
                 imgEl2.setAttribute("id", "imgEL2" + i)
-                dayEl.append(imgEl2)
+                
 
                 var ulEl = document.createElement('ul')
                 ulEl.classList.add("list2")
@@ -135,6 +135,8 @@ function weather(e) {
 
 
             }
+            var cow = imgEl2
+            dayEl.append(cow)
         })
 
 
