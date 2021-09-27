@@ -20,7 +20,7 @@ Go to https://jahbeezy.github.io/Zephyr/ and focus on the input box. Type in a c
 
 ## Credits
 
-Carlos Hernandes
+Carlos Hernandez
 
 
 https://developer.mozilla.org/en-US/
