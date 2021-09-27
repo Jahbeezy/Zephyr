@@ -4,6 +4,7 @@ var button = document.getElementById("btn")
 var resultsEL = document.getElementById("results")
 var searchEl = document.getElementById("searchHistory")
 
+
 var tempEl = document.getElementById("temp")
 var windEl = document.getElementById("wind")
 var humidEl = document.getElementById("humid")
@@ -65,7 +66,7 @@ function weather(e) {
                 })
 
         })
-
+    
 
     var fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + input.value + "&units=imperial&appid=996c94364b7477ad5464025a50334747"
     fetch(fiveDayURL)
@@ -73,8 +74,11 @@ function weather(e) {
             return reso.json();
         })
         .then(function (dato) {
-            e.preventDefault();
+
             console.log(dato)
+            
+
+
             for (var i = 0, b = 0; i < 39, b < 5; i += 8, b++) {
 
                 var fiveDiv = document.createElement('div')
@@ -88,6 +92,22 @@ function weather(e) {
                 dateH4.setAttribute("id", "fiveDate" + i)
                 dateH4.append(moment().add(b, "days").format("L"))
                 fiveDiv.appendChild(dateH4)
+
+
+                var imgEl = document.createElement("img")
+                
+                
+                imgEl.setAttribute("src", "http://openweathermap.org/img/wn/" + dato.list[i].weather[0].icon + ".png")
+                imgEl.setAttribute("width", "35px")
+                imgEl.setAttribute("id", "imgEL" + i)
+                dateH4.append(imgEl)
+                var imgEl2 = document.createElement("img")
+
+                
+                
+                imgEl2.setAttribute("src", "http://openweathermap.org/img/wn/" + dato.list[0].weather[0].icon + ".png")
+                imgEl2.setAttribute("id", "imgEL2" + i)
+                dayEl.append(imgEl2)
 
                 var ulEl = document.createElement('ul')
                 ulEl.classList.add("list2")
@@ -112,14 +132,58 @@ function weather(e) {
                 liHumid.setAttribute("id", "fiveHumid" + i)
                 liHumid.append("Humidity: " + dato.list[i].main.humidity + "%")
                 ulEl.appendChild(liHumid)
-                
 
 
             }
         })
 
+
+    
+
+    createList()
+    showHist()
+
 }
 
+function createList() {
+
+    var searchHist = {
+        city: input.value
+    }
+    if (localStorage.getItem("city") === null) {
+        var searchHistArray = [searchHist]
+        localStorage.setItem("city", JSON.stringify(searchHistArray))
+    } else {
+        
+        var localHist = localStorage.getItem("city")
+        var localParse = JSON.parse(localHist)
+        localParse.unshift(searchHist)
+        localStorage.setItem("city", JSON.stringify(localParse))
+    }
+
+}
+
+function showHist() {
+    searchEl.innerHTML = ""
+    fiveDayEl.innerHTML = ""
+
+
+    var histDisp = JSON.parse(localStorage.getItem("city"));
+
+    if (histDisp !== null) {
+
+        for (var i = 0; i < histDisp.length && i < 8; i++) {
+           
+            var hiist = histDisp[i]
+            var liHist = document.createElement('li')
+            liHist.classList.add("searchHist")
+            liHist.textContent = hiist.city
+            searchEl.appendChild(liHist)
+        }
+
+    }
+
+}
 
 
 button.addEventListener("click", weather)

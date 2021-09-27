@@ -1,90 +1,56 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Zephyr
 
-## Your Task
+## Description
+---
+    For this Project I needed to create a program that could display the weather forecast to plan trips accordingly. My weather channel allows you to easily search the name of a city from anywhere around the world. The weather conditions such as wind, humidity, temperature and UV will be displayed. Below that a five day forecast is shown. The data was grathered with a weather API and multiple fetch calls to target specific data. After that I used js to dynamically generate elements to store the fetch data in. The searches are stored in the local data and are displayed underneath the search bar. I learned how to make a much more interactive webpage that can access API data.
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+## Installation
 
-Use the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data for cities. Read through the documentation for setup and usage instructions. You will use `localStorage` to store any persistent data. For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
+To install this application go to https://github.com/Jahbeezy/Zephyr and copy the SSH key and clone it to your terminal.
 
-## User Story
+## Usage
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+Go to https://jahbeezy.github.io/Zephyr/ and focus on the input box. Type in a city then click the search button. You will be presented with the current temperature, wind, humidity and UV reading. Below that will be a five day forecast. You can then search another city after. Searches are saved into local storage and displayed on the page.
 
-## Acceptance Criteria
+<img src="./imgs/home.png" width="50%">
+<img src="./imgs/disp1.png" width="50%">
+<img src="./imgs/disp2.png" width="50%">
+<img src="./imgs/sc.png" width="50%">
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-```
 
-## Mock-Up
+## Credits
 
-The following image shows the web application's appearance and functionality:
+Carlos Hernandes
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./Assets/06-server-side-apis-homework-demo.png)
 
-## Grading Requirements
+https://developer.mozilla.org/en-US/
 
-This homework is graded based on the following criteria: 
 
-### Technical Acceptance Criteria: 40%
 
-* Satisfies all of the above acceptance criteria plus the following:
+https://www.w3schools.com/
 
-    * Uses the OpenWeather API to retrieve weather data.
 
-    * Uses `localStorage` to store persistent data.
+## Liscence
 
-### Deployment: 32%
+    MIT License
 
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+    Copyright (c) [year] [fullname]
+    
+    Permission is hereby granted, free of charge, to any    person obtaining a copy
+    of this software and associated documentation files (the    "Software"), to deal
+    in the Software without restriction, including without  limitation the rights
+    to use, copy, modify, merge, publish, distribute,   sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the   Software is
+    furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice   shall be included in all
+    copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY   KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF     MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN    NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,   DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR    OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR     OTHER DEALINGS IN THE
+    SOFTWARE.
+    
